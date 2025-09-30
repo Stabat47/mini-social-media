@@ -8,189 +8,20 @@ body {
 .navbar {
   background: #1877f2;
   color: white;
-  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
-}
-
-.container {
-  max-width: 600px;
-  margin: 20px auto;
-}
-
-.create-post {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-#createPost textarea {
-  width: 100%;
-  height: 70px;
-  border-radius: 8px;
-  padding: 8px;
-}
-
-.feed-container .post {
-  background: white;
-  border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 15px;
-}
-
-.post-header {
-  display: flex;
   align-items: center;
-  margin-bottom: 10px;
-}
-
-
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  overflow: hidden; 
-  background: #ccc; 
-  margin-right: 10px;
-  flex-shrink: 0;
-}
-
-
-.avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  display: block;
-}
-
-
-
-
-.post-actions {
-  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 20px;
   gap: 10px;
-  margin-bottom: 10px;
 }
 
-.post {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
-  padding: 15px;
-}
-
-.post-header {
+.navbar h1 { font-size: 1.5rem; }
+.navbar .user-info {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
-.post-header {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #ccc; /* placeholder */
-}
-
-.post-content {
-  margin-top: 10px;
-  font-size: 16px;
-}
-
-.comment-section {
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid #eee;
-}
-
-
-.comment {
-  padding: 5px 0;
-  font-size: 14px;
-}
-
-
-.reaction-picker {
-  display: none;
-  position: absolute;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  padding: 5px;
-  gap: 5px;
-}
-
-.like-container:hover .reaction-picker {
-  display: flex;
-}
-
-.create-post {
-  border: 1px solid #ddd;
-  padding: 12px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  background: #fff;
-}
-
-.create-post textarea {
-  width: 100%;
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  resize: none;
-  margin-bottom: 10px;
-}
-
-.post-actions {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.action-btn {
-  padding: 6px 12px;
-  background: #f0f0f0;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.action-btn:hover {
-  background: #e0e0e0;
-}
-
-.post-btn {
-  margin-left: auto;
-  padding: 6px 16px;
-  background: #0077ff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.post-btn:hover {
-  background: #005fcc;
-}
-
-.post-image {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-top: 10px;
-}
-
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
 #navAvatar {
   width: 35px;
   height: 35px;
@@ -198,96 +29,110 @@ body {
   object-fit: cover;
   border: 2px solid #fff;
 }
+#navUsername { font-weight: bold; color: white; }
 
-#navUsername {
-  font-weight: bold;
+.container { max-width: 600px; margin: 20px auto; padding: 0 15px; }
+
+/* CREATE POST */
+.create-post {
+  background: #fff;
+  color: #333;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.create-post textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: none;
+  font-size: 1rem;
+}
+
+.post-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background: #0077ff;
   color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.post-btn:hover { background: #005fcc; }
+
+/* POSTS */
+.feed-container .post {
+  background: #fff;
+  color: #333;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-/* -----------------------------
-    RESPONSIVENESS
-   ----------------------------- */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #ccc;
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
 
-/* 1. Small screens: phones (< 600px) */
+.username { font-weight: bold; color: #333; }
+.timestamp { font-size: 12px; color: #666; }
+.post-content { margin: 10px 0; font-size: 1rem; color: #333; }
+
+.post-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+
+.comment-section { margin-top: 10px; }
+.comment { font-size: 0.875rem; margin-bottom: 5px; }
+.comment .comment-user { font-weight: bold; }
+.commentInput { width: 100%; padding: 6px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; }
+
+#backToFeedBtn {
+  margin-right: 10px;
+  padding: 6px 12px;
+  background: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+#backToFeedBtn:hover { background: #005fcc; }
+
+/* RESPONSIVENESS */
+/* Phones <600px */
 @media (max-width: 600px) {
-  body {
-    padding: 0 10px;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px;
-  }
-
-  .container {
-    max-width: 100%;
-    margin: 10px auto;
-  }
-
-  .create-post textarea {
-    height: 60px;
-    font-size: 14px;
-  }
-
-  .avatar {
-    width: 35px;
-    height: 35px;
-  }
-
-  .post-content {
-    font-size: 14px;
-  }
-
-  .post-actions {
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .post-btn {
-    width: 100%;
-    margin-top: 10px;
-  }
+  .navbar { flex-direction: column; align-items: flex-start; }
+  .navbar h1 { font-size: 1.3rem; }
+  .create-post textarea { font-size: 0.9rem; height: 60px; }
+  .post-content { font-size: 0.875rem; }
+  .avatar { width: 35px; height: 35px; }
+  .post-btn { width: 100%; }
 }
 
-/* 2. Medium screens: tablets (600px – 1024px) */
+/* Tablets 601-1024px */
 @media (min-width: 601px) and (max-width: 1024px) {
-  .container {
-    max-width: 90%;
-    margin: 15px auto;
-  }
-
-  .navbar {
-    padding: 12px 20px;
-  }
-
-  .avatar {
-    width: 40px;
-    height: 40px;
-  }
-
-  .create-post textarea {
-    height: 70px;
-  }
-
-  .post-content {
-    font-size: 15px;
-  }
+  .container { max-width: 90%; }
+  .create-post textarea { height: 70px; font-size: 0.95rem; }
+  .post-content { font-size: 0.95rem; }
 }
 
-/* 3. Large screens: desktops (> 1024px) */
+/* Desktops >1024px */
 @media (min-width: 1025px) {
-  .container {
-    max-width: 600px;
-  }
-
-  .create-post textarea {
-    height: 80px;
-  }
-
-  .post-content {
-    font-size: 16px;
-  }
+  .container { max-width: 600px; }
+  .create-post textarea { height: 80px; }
+  .post-content { font-size: 1rem; }
 }

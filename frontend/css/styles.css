@@ -1,287 +1,131 @@
- /* Basic landing page styles */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            color: #fff;
-            position: center;
-            text-align: center;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 50px;
-            background: rgba(0,0,0,0.3);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 28px;
-        }
-
-        header nav a {
-            margin-left: 15px;
-            padding: 8px 16px;
-            border: 1px solid #fff;
-            border-radius: 20px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        header nav a:hover {
-            background: #fff;
-            color: hsl(9, 96%, 50%);
-        }
-
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: calc(100vh - 80px);
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        main h2 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        main p {
-            font-size: 20px;
-            margin-bottom: 30px;
-            max-width: 600px;
-        }
-
-        .cta-buttons a {
-            margin: 0 10px;
-            padding: 12px 28px;
-            border-radius: 25px;
-            font-size: 18px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .cta-register {
-            background: #fff;
-            color: #2575fc;
-        }
-
-        .cta-register:hover {
-            background: #e0e0e0;
-        }
-
-        .cta-login {
-            border: 2px solid #fff;
-            color: #fff;
-        }
-
-        .cta-login:hover {
-            background: #fff;
-            color: #2575fc;
-        }
-
-
-   
-        /* Basic feed styles */
-        #createPost {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        #createPost textarea {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            resize: none;
-        }
-        #createPost button {
-            margin-top: 10px;
-            padding: 8px 16px;
-            border-radius: 20px;
-            border: none;
-            background: #4267B2;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-        }
-       .post-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
+/* ------------------------------
+   GLOBAL
+------------------------------- */
+* { box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #fff;
+  text-align: center;
+  line-height: 1.5;
 }
 
-.avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-
+/* ------------------------------
+   HEADER / NAVBAR
+------------------------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  flex-wrap: wrap;
 }
 
-.username {
-    font-weight: bold;
-    color: #333;
+header h1 { font-size: 1.8rem; }
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-
-.timestamp {
-    font-size: 12px;
-    color: #666;
-}
-
-.post-content {
-    margin: 10px 0;
-    font-size: 16px;
-    color: #333;
-}
-
-.post-actions {
-    display: flex;
-    gap: 15px;
-    margin-top: 10px;
-}
-
-.comment-section {
-    margin-top: 10px;
-}
-
-.comment {
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-.comment .comment-user {
-    font-weight: bold;
-}
-
-.commentInput {
-    width: 100%;
-    padding: 6px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-#backToFeedBtn {
-  margin-right: 10px;
-  padding: 6px 12px;
-  background: #0077ff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-#backToFeedBtn:hover {
-  background: #005fcc;
-}
-
-a {
-  color: #ff7b00;
+header nav a {
+  padding: 8px 16px;
+  border-radius: 25px;
+  border: 1px solid #fff;
   text-decoration: none;
-  font-weight: 700;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s;
+}
+header nav a:hover {
+  background: #fff;
+  color: #2575fc;
 }
 
-a:hover {
-  text-decoration: underline;
-    color: #4ee906;
+/* ------------------------------
+   MAIN / LANDING
+------------------------------- */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+  padding: 0 15px;
 }
+main h2 { font-size: 2.5rem; margin-bottom: 20px; }
+main p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; }
 
+.cta-buttons a {
+  margin: 0 10px;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.cta-register {
+  background: #fff;
+  color: #2575fc;
+}
+.cta-register:hover { background: #e0e0e0; }
+.cta-login {
+  border: 2px solid #fff;
+  color: #fff;
+}
+.cta-login:hover { background: #fff; color: #2575fc; }
 
-/* -----------------------------
+/* ------------------------------
+   FORMS (Login/Register)
+------------------------------- */
+form {
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  margin: 20px auto;
+}
+form input, form button {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+form button {
+  background: #0077ff;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+form button:hover { background: #005fcc; }
+
+/* ------------------------------
    RESPONSIVENESS
-   ----------------------------- */
-
-/* 1. Small screens: phones (< 600px) */
+------------------------------- */
+/* Small screens < 600px */
 @media (max-width: 600px) {
-  body {
-    padding: 0 10px;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px;
-  }
-
-  .container {
-    max-width: 100%;
-    margin: 10px auto;
-  }
-
-  .create-post textarea {
-    height: 60px;
-    font-size: 14px;
-  }
-
-  .avatar {
-    width: 35px;
-    height: 35px;
-  }
-
-  .post-content {
-    font-size: 14px;
-  }
-
-  .post-actions {
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .post-btn {
-    width: 100%;
-    margin-top: 10px;
-  }
+  header { flex-direction: column; align-items: flex-start; gap: 10px; }
+  header h1 { font-size: 1.5rem; text-align: left; }
+  header nav a { font-size: 0.9rem; padding: 6px 10px; }
+  main h2 { font-size: 2rem; }
+  main p { font-size: 1rem; }
 }
 
-/* 2. Medium screens: tablets (600px – 1024px) */
+/* Medium screens 601px–1024px */
 @media (min-width: 601px) and (max-width: 1024px) {
-  .container {
-    max-width: 90%;
-    margin: 15px auto;
-  }
-
-  .navbar {
-    padding: 12px 20px;
-  }
-
-  .avatar {
-    width: 40px;
-    height: 40px;
-  }
-
-  .create-post textarea {
-    height: 70px;
-  }
-
-  .post-content {
-    font-size: 15px;
-  }
+  main h2 { font-size: 2.2rem; }
+  main p { font-size: 1.1rem; }
 }
 
-/* 3. Large screens: desktops (> 1024px) */
+/* Large screens >1024px */
 @media (min-width: 1025px) {
-  .container {
-    max-width: 600px;
-  }
-
-  .create-post textarea {
-    height: 80px;
-  }
-
-  .post-content {
-    font-size: 16px;
-  }
+  main h2 { font-size: 2.5rem; }
+  main p { font-size: 1.2rem; }
 }
