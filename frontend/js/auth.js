@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const API_URL = 'http://localhost:5000/api/auth';
+    const API_URL = 'https://mini-social-media-jba5.onrender.com/api/auth';
 
     // Register
     const registerForm = document.getElementById('registerForm');

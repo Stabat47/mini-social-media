@@ -1,4 +1,4 @@
-const API = 'http://localhost:5000/api';
+const API = 'https://mini-social-media-jba5.onrender.com//api';
 const token = localStorage.getItem('token');
 
 // DOM elements

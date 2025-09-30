@@ -6,7 +6,7 @@ const logoutBtn = document.getElementById('logoutBtn');
 const postImage = document.getElementById('postImage');
 const videoBtn = document.getElementById('videoBtn');
 
-const API = 'http://localhost:5000/api'; 
+const API = 'https://mini-social-media-jba5.onrender.com/api'; 
 
 // Get current user info from localStorage
 const currentUser = JSON.parse(localStorage.getItem('user') || 'null');
